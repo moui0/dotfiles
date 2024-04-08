@@ -22,6 +22,7 @@ source $HOME/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias tmux='tmux -u'
 
 export EDITOR='vim'
 
