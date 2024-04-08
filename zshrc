@@ -24,3 +24,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 export EDITOR='vim'
+
+# always use 256 colors
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
