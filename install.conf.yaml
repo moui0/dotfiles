@@ -8,4 +8,6 @@
     ~/.p10k.zsh:
     ~/.vim:
     ~/.vimrc:
+    ~/.tmux:
+    ~/.tmux.conf:
 - shell: []

@@ -17,3 +17,6 @@
 [submodule "vim/pack/dist/start/vim-airline"]
 	path = vim/pack/dist/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
+[submodule "tmux/plugins/catppuccin"]
+	path = tmux/plugins/catppuccin
+	url = git@github.com:catppuccin/tmux.git
