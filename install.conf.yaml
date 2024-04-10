@@ -2,12 +2,14 @@
 - defaults:
     link:
       relink: true
+- shell:
+    - git submodule update --init --recursive --depth 1
 - link:
     ~/.zsh:
     ~/.zshrc:
     ~/.p10k.zsh:
+    ~/.oh-my-zsh:
     ~/.vim:
     ~/.vimrc:
     ~/.tmux:
     ~/.tmux.conf:
-- shell: []
