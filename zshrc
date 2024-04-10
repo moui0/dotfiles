@@ -24,7 +24,10 @@ ZSH_CUSTOM=$HOME/.zsh/custom
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
+    colored-man-pages
+    extract
     git
+    z
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -39,3 +42,5 @@ export EDITOR='vim'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
