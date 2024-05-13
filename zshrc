@@ -15,9 +15,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-# enable command auto-correction.
-ENABLE_CORRECTION="true"
-
 # oh-my-zsh custom folder
 ZSH_CUSTOM=$HOME/.zsh/custom
 
@@ -44,3 +41,5 @@ export EDITOR='vim'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=$HOME/.local/bin:$PATH
