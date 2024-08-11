@@ -43,3 +43,5 @@ export EDITOR='vim'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+
