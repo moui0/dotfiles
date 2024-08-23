@@ -2,18 +2,6 @@
 	path = dotbot
 	url = git@github.com:anishathalye/dotbot
 	ignore = dirty
-[submodule "zsh/custom/plugins/zsh-autosuggestions"]
-	path = zsh/custom/plugins/zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
-	ignore = dirty
-[submodule "zsh/custom/plugins/zsh-syntax-highlighting"]
-	path = zsh/custom/plugins/zsh-syntax-highlighting
-	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
-	ignore = dirty
-[submodule "zsh/custom/themes/powerlevel10k"]
-	path = zsh/custom/themes/powerlevel10k
-	url = git@github.com:romkatv/powerlevel10k.git
-	ignore = dirty
 [submodule "vim/pack/default/start/gruvbox"]
 	path = vim/pack/default/start/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
@@ -26,11 +14,25 @@
 	path = tmux/plugins/catppuccin
 	url = git@github.com:catppuccin/tmux.git
 	ignore = dirty
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = git@github.com:ohmyzsh/ohmyzsh.git
-	ignore = dirty
 [submodule "fzf"]
 	path = fzf
 	url = git@github.com:junegunn/fzf.git
 	ignore = dirty
+[submodule "zsh/plugins/zsh-autosuggestions"]
+	path = zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/plugins/fast-syntax-highlighting"]
+	path = zsh/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
+[submodule "zsh/themes/powerlevel10k"]
+	path = zsh/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh/plugins/extract"]
+	path = zsh/plugins/extract
+	url = https://github.com/xvoland/Extract.git
+[submodule "zsh/plugins/zsh-history-substring-search"]
+	path = zsh/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "zsh/plugins/zsh-z"]
+	path = zsh/plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z.git

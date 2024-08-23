@@ -5,43 +5,53 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt autocd extendedglob
+bindkey -v
+# End of lines configured by zsh-newuser-install
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# plugins
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/plugins/extract/extract.sh
+source ~/.zsh/plugins/zsh-z/zsh-z.plugin.zsh
+source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
-# hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# The following lines were added by compinstall
+zstyle :compinstall filename "$HOME/.zshrc"
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+# End of lines added by compinstall
 
-# oh-my-zsh custom folder
-ZSH_CUSTOM=$HOME/.zsh/custom
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(
-    colored-man-pages
-    extract
-    git
-    z
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-export EDITOR='vim'
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # always use 256 colors
 [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+
+# alias
+alias ls='ls --color=always'
+alias x='extract'
+
+export EDITOR='vim'
+export MANROFFOPT='-c'
+command -v bat &> /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
