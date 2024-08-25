@@ -19,6 +19,7 @@ source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.z
 source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/plugins/extract/extract.sh
 source ~/.zsh/plugins/zsh-z/zsh-z.plugin.zsh
+source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # The following lines were added by compinstall
