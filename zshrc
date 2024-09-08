@@ -28,11 +28,17 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 # End of lines added by compinstall
 
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
-bindkey  "^[[3~"  delete-char
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
+# cd -n
+setopt pushdsilent # Omit printing directory stack
+setopt autopushd   # Make cd push directories onto stack
+setopt pushdminus  # Invert meanings of +N and -N arguments to pushd
+
+bindkey '^[[Z'  reverse-menu-complete # shift + tab
+bindkey '^[[H'  beginning-of-line
+bindkey '^[[F'  end-of-line
+bindkey '^[[3~' delete-char
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
