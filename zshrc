@@ -26,6 +26,7 @@ source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # End of lines added by compinstall
 
 # cd -n
@@ -63,4 +64,3 @@ command -v bat &> /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
