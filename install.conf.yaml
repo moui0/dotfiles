@@ -7,7 +7,6 @@
 - link:
     ~/.zsh:
     ~/.zshrc:
-    ~/.p10k.zsh:
     ~/.vim:
     ~/.vimrc:
     ~/.tmux:
@@ -15,3 +14,4 @@
     ~/.fzf:
 - shell:
     - ~/.fzf/install --key-bindings --completion --no-update-rc
+    - mkdir -p ~/.config && ./bin/starship preset gruvbox-rainbow -o ~/.config/starship.toml

@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -20,7 +13,6 @@ source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.
 source ~/.zsh/plugins/extract/extract.sh
 source ~/.zsh/plugins/zsh-z/zsh-z.plugin.zsh
 source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
@@ -62,5 +54,4 @@ export EDITOR='vim'
 export MANROFFOPT='-c'
 command -v bat &> /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$($HOME/dotfiles/bin/starship init zsh)"
