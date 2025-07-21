@@ -22,9 +22,12 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # End of lines added by compinstall
 
 # cd -n
-setopt pushdsilent # Omit printing directory stack
-setopt autopushd   # Make cd push directories onto stack
-setopt pushdminus  # Invert meanings of +N and -N arguments to pushd
+setopt pushdsilent      # Omit printing directory stack
+setopt autopushd        # Make cd push directories onto stack
+setopt pushdignoredups  # Remove duplicates from directory heap
+setopt pushdminus       # Invert meanings of +N and -N arguments to pushd
+
+setopt hist_ignore_all_dups
 
 bindkey '^[[Z'  reverse-menu-complete # shift + tab
 bindkey '^[[H'  beginning-of-line
