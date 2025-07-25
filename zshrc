@@ -57,4 +57,4 @@ export EDITOR='vim'
 export MANROFFOPT='-c'
 command -v bat &> /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-eval "$($HOME/dotfiles/bin/starship init zsh)"
+eval "$(starship init zsh)"
