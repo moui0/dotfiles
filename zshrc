@@ -58,3 +58,25 @@ export MANROFFOPT='-c'
 command -v bat &> /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 eval "$(starship init zsh)"
+
+export HOME=/home/admin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/admin/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/admin/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/admin/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/admin/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH=$IMAGE_PATH:$PATH
+export LD_LIBRARY_PATH=$IMAGE_LD_LIBRARY_PATH:$LD_LIBRARY_PATH
+[ -e /home/admin/.aoplab_meta ] && source <(sed 's/^/export /' /home/admin/.aoplab_meta)
+
