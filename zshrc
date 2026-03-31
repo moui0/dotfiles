@@ -6,6 +6,13 @@ setopt autocd extendedglob
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+# The following lines were added by compinstall
+zstyle :compinstall filename "$HOME/.zshrc"
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# End of lines added by compinstall
+
 # plugins
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -13,13 +20,7 @@ source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.
 source ~/.zsh/plugins/extract/extract.sh
 source ~/.zsh/plugins/zsh-z/zsh-z.plugin.zsh
 source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-# End of lines added by compinstall
+source ~/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
 
 # cd -n
 setopt pushdsilent      # Omit printing directory stack
@@ -52,6 +53,8 @@ export PATH=$HOME/.cargo/bin:$PATH
 # alias
 alias ls='ls --color=always'
 alias x='extract'
+alias vim='/home/admin/miniconda3/bin/vim'
+alias tmux='/home/admin/miniconda3/bin/tmux'
 
 export EDITOR='vim'
 export MANROFFOPT='-c'
