@@ -53,8 +53,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 # alias
 alias ls='ls --color=always'
 alias x='extract'
-alias vim='/home/admin/miniconda3/bin/vim'
-alias tmux='/home/admin/miniconda3/bin/tmux'
 
 export EDITOR='vim'
 export MANROFFOPT='-c'
@@ -62,24 +60,22 @@ command -v bat &> /dev/null && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 eval "$(starship init zsh)"
 
-export HOME=/home/admin
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/admin/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/admin/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/admin/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/admin/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 export PATH=$IMAGE_PATH:$PATH
 export LD_LIBRARY_PATH=$IMAGE_LD_LIBRARY_PATH:$LD_LIBRARY_PATH
-[ -e /home/admin/.aoplab_meta ] && source <(sed 's/^/export /' /home/admin/.aoplab_meta)
+
+
+export PATH=$PATH:/usr/local/cuda:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/targets/x86_64-linux/lib:/usr/local/lib
+export CUDA_HOME=/usr/local/cuda
+. "$HOME/.cargo/env"
+
+export RUSTUP_UPDATE_ROOT=https://mirrors.aliyun.com/rustup/rustup
+export RUSTUP_DIST_SERVER=https://mirrors.aliyun.com/rustup
+
+
+# uv
+export PATH="/root/.local/bin:$PATH"
+export UV_INDEX_URL="https://artlab.alibaba-inc.com/1/PYPI/simple/"
+
+alias claude='IS_SANDBOX=1 claude --allow-dangerously-skip-permissions --dangerously-skip-permissions'
 
