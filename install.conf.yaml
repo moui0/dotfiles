@@ -15,4 +15,4 @@
 - shell:
     - ~/.fzf/install --key-bindings --completion --no-update-rc
     - mkdir -p ~/.local/bin && sh <(curl -sS https://starship.rs/install.sh) -y --bin-dir ~/.local/bin
-    - mkdir -p ~/.config && starship preset gruvbox-rainbow -o ~/.config/starship.toml
+    - mkdir -p ~/.config && ~/.local/bin/starship preset gruvbox-rainbow -o ~/.config/starship.toml
